@@ -17,7 +17,7 @@ adenine = x.count("a")
 thymine = x.count("t")
 gc_total = cytosine+guanine
 at_total = adenine+thymine
-
+lijst = []
 
 ################################################
 ##Main function referring to the subfunctions###
@@ -26,22 +26,21 @@ at_total = adenine+thymine
 def main():
 	getComplement()
 	print (" ")
-	print ("##################################################")
+	print (("#")*45)
 	print (" ")
 	GC_perc()
 	print (" ")
-	print ("###################################################")
+	print (("#")*45)
 	print (" ")
 	AT_perc()
 	print (" ")
-	print ("####################################################")
+	print (("#")*45)
 	print (" ")
 	isDNA()
 	print (" ")
-	print ("#####################################################")
+	print (("#")*45)
 	print (" ")
 	translation()
-
 
 
 ##############################
@@ -116,8 +115,9 @@ def translation():
             while start+2 < len(DNA):
                 codon = DNA[start:start+3]
                 if codon == "tag": break;
-                print(map[codon])
+                lijst.append(map[codon])                
                 start+=3
 
-
 main()
+
+print (lijst)
